@@ -95,13 +95,13 @@ Example:
 - Operator precedence determines the order in which operators are evaluated in an expression.
 - Operators with higher precedence are evaluated first.
 - The below table depicts the precedence of operators in decreasing order as magnitude, with the top representing the highest precedence and the bottom showing the lowest precedence.
-![alt text](src/images/precedence.png)
+![alt text](../src/images/precedence.png)
 
 ## Associativity
 - Associativity determines the order in which operators of the same precedence are evaluated.
 - Operators with left-to-right associativity are evaluated from left to right.
 - Operators with right-to-left associativity are evaluated from right to left.
-![alt text](src/images/precedence_associativity.png)
+![alt text](../src/images/precedence_associativity.png)
 
 ## Interesting Facts
 
