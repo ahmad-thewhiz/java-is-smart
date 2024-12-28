@@ -29,3 +29,18 @@
 ### Widening and Narrowing
 - Widening: Converting a smaller data type to a larger data type.
 - Narrowing: Converting a larger data type to a smaller data type.
+
+### Properties of Class
+- Encapsulation: Wrapping up of data and methods into a single unit.
+- Types of properties:
+1. read & write: getter and setter methods
+2. read only: getter method
+3. write only: setter method
+
+### Constructors
+- A constructor is a special type of method that is used to initialize an object.
+- It is called when an object is created.
+- It has the same name as the class.
+Types:
+1. Default constructor: No-argument constructor
+2. Parameterized constructor: Constructor with arguments
