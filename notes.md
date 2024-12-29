@@ -44,3 +44,31 @@
 Types:
 1. Default constructor: No-argument constructor
 2. Parameterized constructor: Constructor with arguments
+
+### Static
+The static keyword in Java is a powerful modifier used for memory management and defining members that belong to the class rather than any specific instance of the class. Here's an explanation of its usage:
+
+Static Variables
+- Definition: A static variable is shared among all instances of the class. It is also called a class variable.
+Usage: To define properties that should be the same for all objects.
+- Behavior:
+Memory for static variables is allocated only once when the class is loaded.
+Shared across all instances of the class.
+- Example:
+```java
+Copy code
+class Example {
+    static int counter = 0; // Shared among all instances
+    Example() {
+        counter++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Example obj1 = new Example();
+        Example obj2 = new Example();
+        System.out.println(Example.counter); // Output: 2
+    }
+}
+```
