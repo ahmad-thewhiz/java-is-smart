@@ -81,3 +81,17 @@ Static Methods
 - void sleep(long millis): Causes the current thread to sleep for the specified number of milliseconds.
 - void yield(): Causes the currently executing thread object to temporarily pause and allow other threads to execute.
 - void dumpStack(): Prints a stack trace of the current thread to the standard error stream.
+
+
+Inheritance vs Interface of Thread Class
+
+Extending the Thread class restricts your class from inheriting any other class, as Java supports single inheritance.
+Implementing the Runnable interface allows your class to inherit from another class while still defining a thread.
+Code Reusability:
+
+Extending the Thread class ties the thread functionality directly to your class, making it harder to reuse the thread logic.
+Implementing the Runnable interface separates thread logic from the task, enabling better code reuse and decoupling.
+Resource Sharing:
+
+When extending the Thread class, each thread gets its own instance of the class, leading to separate resources.
+When implementing Runnable, multiple threads can share the same Runnable instance, allowing resource sharing between threads.
