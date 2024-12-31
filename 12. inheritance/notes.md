@@ -30,3 +30,6 @@ Achieved using Inheritance
 - Polymorphism is the ability of a single function or method to operate on multiple data types.
 - Polymorphism is a feature of OOP that allows objects to be treated as instances of their parent class.
 - It is achieved using method overriding and method overloading.
+
+- hasA relationship is achieved when an object of one class is declared in another class. It is also known as composition.
+-  isA relationship is achieved using inheritance. It is also known as generalization or specialization.
