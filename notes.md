@@ -72,3 +72,10 @@ public class Main {
     }
 }
 ```
+
+Java AWT
+- AWT (Abstract Window Toolkit) is a package in Java that provides classes for creating GUI applications.
+- It includes components like buttons, labels, text fields, etc., to build graphical user interfaces.
+- AWT components are heavyweight, meaning they are rendered by the operating system's windowing system.
+
+Url: [AWT Docs](https://docs.oracle.com/en/java/javase/13/docs/api/java.desktop/java/awt/package-summary.html)
