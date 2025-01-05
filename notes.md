@@ -79,3 +79,12 @@ Java AWT
 - AWT components are heavyweight, meaning they are rendered by the operating system's windowing system.
 
 Url: [AWT Docs](https://docs.oracle.com/en/java/javase/13/docs/api/java.desktop/java/awt/package-summary.html)
+
+- instead of destructors, java has 'finalize' method which is called by the garbage collector before reclaiming the memory.
+
+- hashcode is a unique identifier for an object. It is used in hashing-based collections like HashMap, HashSet, etc.
+
+string vs string buffer vs string builder:
+- string: immutable, thread-safe
+- string buffer: mutable, thread-safe
+- string builder: mutable, not thread-safe
