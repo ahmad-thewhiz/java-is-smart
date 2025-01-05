@@ -1,0 +1,2 @@
+- lambda exp can access or capture local variables only if they are final or effectively final (never modified after initialization)
+- lambda exp can access instance variables and static variables.
