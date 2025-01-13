@@ -16,8 +16,9 @@ public class DatagramServer
         sb.reverse();
         msg=sb.toString();
 
-         dp=new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName("localhost"),2001);
-        
+        dp=new DatagramPacket(msg.getBytes(),msg.length(),InetAddress.getByName("localhost"),2001);
+        // bytes, length, address, port
+
         ds.send(dp);
  
         ds.close();
