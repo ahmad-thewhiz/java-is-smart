@@ -1,0 +1,1 @@
+java -cp .;D:\java\Java-Fundamentals\lib\sqlite-jdbc-3.48.0.jar database 
