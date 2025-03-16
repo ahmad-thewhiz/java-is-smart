@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--        <bean id="alien" class="com.ahmad.Alien" scope="prototype">-->
+
+<!--        <bean id="alien" class="com.ahmad.Alien">-->
+<!--                <property name="age" value="21"></property>-->
+<!--                <property name="lap" ref="lap1"></property>-->
+<!--        </bean>-->
+
+        <bean id="alien1" class="com.ahmad.Alien" autowire="byName">
+
+<!--                <constructor-arg type="com.ahmad.Lap" ref="lap1"/>-->
+                <constructor-arg value="21"/>
+                <constructor-arg index="2" value="12000000"/>
+                <property name="com1" ref="com1"></property>
+<!--&lt;!&ndash;                <property name="age" value="21"></property>&ndash;&gt;-->
+<!--                <property name="lap" ref="lap1"/>-->
+        </bean>
+
+        <bean id="com1" class="com.ahmad.Lap">
+        </bean>
+
+        <bean id="desktop" class="com.ahmad.Desktop">
+        </bean>
+
+
+</beans>

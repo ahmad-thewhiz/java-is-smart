@@ -1,0 +1,79 @@
+How to download external libraries in Intelli J
+1. navigate to top left corner for menu > project structure
+2. tap on libraries > '+' and select the path of downloaded .jar file
+3. hit 'Apply' then 'Ok'
+4. .jar files can be downloaded from maven repositories website.
+
+
+JDBC Steps to connect to a DB
+
+1. import packages
+2. load drivers
+3. register driver
+4. create connection
+5. create statement
+6. execute statement
+7. close
+
+
+Query:
+.execute(query) - to change data
+.executeQuery(query) - to fetch data
+
+ Features Available in Java and Their Uses 
+
+ JDBC (Java Database Connectivity) Features
+1. Loading Database Drivers  
+   - `Class.forName("org.postgresql.Driver");`  
+   - Loads the PostgreSQL driver dynamically to enable database communication.
+
+2. Establishing a Connection  
+   - `DriverManager.getConnection(url, username, password);`  
+   - Creates a connection to the PostgreSQL database using JDBC.
+
+3. Executing SQL Statements  
+   - `Statement stmt = conn.createStatement();`  
+   - Creates a `Statement` object for executing SQL queries.
+
+4. Executing Queries and Updates  
+   - `.execute(query)` → Used for DDL & DML statements like `INSERT`, `UPDATE`, `DELETE`.  
+   - `.executeQuery(query)` → Used for fetching data (`SELECT` queries).  
+   - `.executeUpdate(query)` → Used for updating records and returns the number of rows affected.
+
+5. Retrieving Single Query Results  
+   - `ResultSet rs = stmt.executeQuery(query);`  
+   - Fetches query results row by row using `rs.next()`.
+
+6. Retrieving Multiple Query Results  
+   - Loops through the `ResultSet` to fetch all rows.
+
+7. Inserting Data Dynamically  
+   - Using `PreparedStatement` to prevent SQL injection and handle dynamic values:  
+     ```java
+     String sql = "insert into student values (?,?,?)";
+     PreparedStatement st = conn.prepareStatement(sql);
+     st.setInt(1, sid);
+     st.setString(2, name);
+     st.setInt(3, marks);
+     st.execute();
+     ```
+   - Improves performance and security.
+
+8. Updating Data  
+   - `stmt.executeUpdate("update student set name='Aditya C' where sid=5");`  
+   - Modifies existing database records.
+
+9. Deleting Data  
+   - `stmt.executeUpdate("delete from student where sid=5");`  
+   - Removes records from the database.
+
+10. Closing the Connection  
+    - `conn.close();`  
+    - Ensures proper resource management and prevents memory leaks.
+
+ Additional Notes
+- `Connection` is an interface → `DriverManager` is used to create connections.  
+- `ResultSet.next()` → Checks if there is a next row in the result.  
+- `execute()` vs `executeUpdate()` → `execute()` is used for general queries, while `executeUpdate()` is used for DML operations.  
+- `PreparedStatement` is recommended over `Statement` for security and efficiency.  
+- Good practice → Always close database connections to free up resources.

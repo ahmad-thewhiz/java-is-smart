@@ -1,0 +1,38 @@
+Hibernate:
+Java is based on OOPs whereas database is relational, in JDBC we have to map them using SQL queries whereas Hibernate does that all by itself.
+It is an Object Relational Mapping (ORM) framework
+Here each object becomes one row
+
+* Embeddable is an important concept
+
+
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+Configuration conf = new Configuration()
+                .configure()
+                .addAnnotatedClass(Student.class);
+
+SessionFactory sf = conf.buildSessionFactory();
+
+Session session = sf.openSession();
+
+
+// Start Transaction (Required in Hibernate)
+        session.beginTransaction();
+
+// Save Object
+session.remove(s2);
+
+session.get(Alien.class, s2);
+
+// merge - update, persist - insertion
+
+// Commit Transaction and Close Session
+session.getTransaction().commit();
+
+session.close();
+sf.close();
