@@ -24,20 +24,24 @@ public class JobService {
 
     //method to return all JobPosts
     public List<JobPost> getAllJobs() {
+
         return repo.findAll();
     }
 
 
     public JobPost getJobById(int id) {
+
         return repo.findById(id).orElse(new JobPost());
     }
 
 
     public void updateJob(JobPost jobPost) {
+
         repo.save(jobPost);
     }
 
     public void deleteJobById(int id) {
+
         repo.deleteById(id);
     }
 
