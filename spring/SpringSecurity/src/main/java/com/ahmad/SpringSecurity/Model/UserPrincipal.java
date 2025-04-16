@@ -1,0 +1,4 @@
+package com.ahmad.SpringSecurity.Model;
+
+public class UserPrincipal {
+}
