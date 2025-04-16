@@ -1,4 +1,6 @@
-FROM ubuntu:latest
-LABEL authors="ahmad"
+FROM openjdk:22-jdk
 
-ENTRYPOINT ["top", "-b"]
+ADD target/spring2.jar spring2.jar
+
+ENTRYPOINT ["java", "-jar", "/spring2.jar"]
+

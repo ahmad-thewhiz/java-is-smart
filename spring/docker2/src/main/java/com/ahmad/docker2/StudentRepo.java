@@ -1,6 +1,9 @@
 package com.ahmad.docker2;
 
-import
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface StudentRepo implements JpaRepository<Student, Integer> {
+@Repository
+public interface StudentRepo extends JpaRepository<Student, Integer> {
+
 }
