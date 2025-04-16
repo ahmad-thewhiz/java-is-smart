@@ -1,4 +1,4 @@
-package com.ahmad.SpringSecurity;
+package com.ahmad.SpringSecurity.Controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping("healthcheck")
-    public String hello() {
-        return "Alive";
+    @GetMapping("hello")
+    public String greet() {
+        return "Hello World ";
     }
-    
-    @GetMapping("session")
-    public String session(HttpServletRequest request) {
-        return "Session: "+request.getSession().getId();
+
+    @GetMapping("about")
+    public String about(HttpServletRequest request) {
+        return "Telusko "+request.getSession().getId();
     }
 }
