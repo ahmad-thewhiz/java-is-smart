@@ -1,4 +1,6 @@
-FROM ubuntu:latest
-LABEL authors="ahmad"
+FROM openjdk:22-jdk
 
-ENTRYPOINT ["top", "-b"]
+ADD target/rest-docker-demo.jar rest-docker-demo.jar
+
+ENTRYPOINT ["java", "-jar", "/rest-docker-demo.jar"]
+
